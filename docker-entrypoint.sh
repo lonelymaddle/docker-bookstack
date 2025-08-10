@@ -16,7 +16,7 @@ check_vars_exist() {
 
 # Split out host and port from DB_HOST env variable
 IFS=":" read -r DB_HOST_NAME DB_PORT <<< "$DB_HOST"
-DB_PORT=${DB_PORT:-5432}
+DB_PORT=${DB_PORT:-3306}
 
 # Ensure there is no local .env file
 if [ -f ".env" ]; then
